@@ -68,23 +68,63 @@ p {
     letter-spacing: -0.02em;
 }
 
-.nav nav {
+.nav-menu {
     display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
 }
 
-.nav nav a {
+.nav-links a {
     text-decoration: none;
     font-weight: 600;
     color: var(--text-soft);
+    padding: 0.2rem 0;
 }
 
-.nav nav a:hover,
-.nav nav a:focus-visible,
+.nav-links a:hover,
+.nav-links a:focus-visible,
 .footer nav a:hover,
 .footer nav a:focus-visible {
     color: var(--brand);
+}
+
+.nav-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fff;
+}
+
+.nav-toggle-label span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: 3px 0;
+    border-radius: 999px;
+    background: var(--text);
+}
+
+.nav-cta {
+    white-space: nowrap;
 }
 
 .btn {
@@ -277,11 +317,16 @@ button:focus-visible {
 @media (max-width: 920px) {
     .nav {
         flex-wrap: wrap;
-        justify-content: center;
     }
 
-    .nav nav {
+    .nav-menu {
+        order: 10;
         width: 100%;
+        margin-left: 0;
+        padding-top: 0.4rem;
+    }
+
+    .nav-links {
         justify-content: center;
     }
 
@@ -292,12 +337,48 @@ button:focus-visible {
 }
 
 @media (max-width: 640px) {
+    .nav {
+        align-items: center;
+    }
+
+    .nav-toggle-label {
+        display: inline-flex;
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 0.45rem 0;
+    }
+
+    .nav-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
     .hero-actions {
         flex-direction: column;
     }
 
     .hero-actions .btn,
-    .nav > .btn {
+    .nav-cta {
         width: 100%;
     }
 
