@@ -295,7 +295,8 @@ p + p {
 .hero-proof,
 .feature-grid,
 .blog-list,
-.form-grid {
+.form-grid,
+.content-grid {
     display: grid;
     gap: 1.1rem;
 }
@@ -313,7 +314,8 @@ p + p {
 .hero-proof-item,
 .feature-card,
 .blog-list li,
-.score-card {
+.score-card,
+.content-card {
     padding: 1.35rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
@@ -323,20 +325,23 @@ p + p {
 
 .hero-proof-item,
 .feature-card,
-.blog-list li {
+.blog-list li,
+.content-card {
     transition: box-shadow 0.22s var(--ease-out), transform 0.22s var(--ease-out), border-color 0.22s;
 }
 
 .hero-proof-item:hover,
 .feature-card:hover,
-.blog-list li:hover {
+.blog-list li:hover,
+.content-card:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-3px);
     border-color: var(--border-strong);
 }
 
 .hero-proof-item strong,
-.feature-card h3 {
+.feature-card h3,
+.content-card h3 {
     display: block;
     margin-bottom: 0.45rem;
     font-size: 1.1rem;
@@ -345,8 +350,33 @@ p + p {
 }
 
 .hero-proof-item span,
-.feature-card p {
+.feature-card p,
+.content-card p,
+.content-card li {
     color: var(--ink-soft);
+}
+
+.content-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.content-card li + li {
+    margin-top: 0.35rem;
+}
+
+.content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 1rem;
+}
+
+.article-shell {
+    max-width: 980px;
+}
+
+.content-stack {
+    display: grid;
+    gap: 1rem;
 }
 
 .section {
@@ -539,7 +569,8 @@ button:focus-visible {
 
     .hero-proof,
     .feature-grid,
-    .blog-list {
+    .blog-list,
+    .content-grid {
         grid-template-columns: 1fr;
     }
 
