@@ -5,56 +5,67 @@
   from = "/marketing-strategy-consultant*"
   to = "/services.html"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/cmo-for-hire*"
   to = "/services.html"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/blog*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/rice-scoring-tool*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/go-to-market-strategies-for-startups*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/startup-founders-guide-to-outsourced-marketing*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/how-to-hire-a-director-of-marketing*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/free-marketing-tools-for-startup-growth*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/privacy*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/do-not-share*"
   to = "/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/opt-out-preferences*"
   to = "/"
   status = 301
+  force = true
 
 [[headers]]
   for = "/*"
